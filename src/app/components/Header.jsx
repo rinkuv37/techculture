@@ -22,7 +22,7 @@ const Header = () => {
                 </nav>
 
 
-                <Button className='bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272] !text-white !rounded-md !px-6 !py-2 !capitalize !font-bold' size='large'>Let's Try</Button>
+                <Button className='bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272] !text-white !rounded-md !px-6 !py-2 !capitalize !font-bold' size='large'>Let&apos;s Try</Button>
 
 
             </div>
