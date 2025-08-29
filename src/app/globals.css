@@ -2,26 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+body{ font-family: "Montserrat", sans-serif;}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+.container{width: 95% !important; max-width: 95% !important; margin: auto; padding: 0px 15px;}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+.homeSlider .item::after{content: ""; width: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.7); z-index: 50; height: 100%;}
+
+.homeSlider .item img{animation: zoomInOut 20s infinite ease-in-out;}
+ @keyframes zoomInOut {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); } /* zoom in */
+      100% { transform: scale(1); }  /* zoom out */
+    }
