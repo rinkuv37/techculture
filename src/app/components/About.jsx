@@ -25,7 +25,7 @@ const About = () => {
                         <img src="/about__small__img__2.png" className='aboutIconImg absolute top-16 right-40' alt='image' />
                     </div>
 
-                    <div className='info w-[50%] flex flex-col gap-5'>
+                    <div className='info w-[50%] flex flex-col gap-5'data-aos="fade-left">
                         <h2 className='text-[50px] font-bold text-gray-700 leading-[60px]'>Smarter E-commerce <br />
                             <span className='text-gred'>Powered by AI</span></h2>
 
