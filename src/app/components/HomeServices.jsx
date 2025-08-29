@@ -5,7 +5,7 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 
 const HomeServices = () => {
     return (
-        <section className='py-20 bg-gray-800'>
+        <section className="py-20 bg-gray-800 serviceSection bg-[url('/herobanner__1.jpg')]">
             <div className='container'>
                 <h2 className='text-white text-[20px]'>SERVICES</h2>
                 <p className='text-white font-light text-[35px] py-3'>Transform your business with advanced technologies</p>
@@ -17,7 +17,7 @@ const HomeServices = () => {
                         <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
                            <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
                                 <h2 className='text-gray-100 text-[25px] font-light'>AI and Data & Analytics</h2>
-                                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272] '><IoIosArrowRoundForward className='-rotate-45 text-white' size={35} /></Button>
+
 
                             </div>
                         </div>
@@ -28,7 +28,7 @@ const HomeServices = () => {
                         <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
                              <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
                                 <h2 className='text-gray-100 text-[25px] font-light'>Cloud</h2>
-                                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272] '><IoIosArrowRoundForward className='-rotate-45 text-white' size={35} /></Button>
+
 
                             </div>
                         </div>
@@ -40,7 +40,7 @@ const HomeServices = () => {
                         <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
                              <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
                                 <h2 className='text-gray-100 text-[25px] font-light'>Cognitive Business Operations</h2>
-                                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272] '><IoIosArrowRoundForward className='-rotate-45 text-white' size={35} /></Button>
+
 
                             </div>
                         </div>
@@ -52,7 +52,7 @@ const HomeServices = () => {
                         <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full !pr-5'>
                             <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
                                 <h2 className='text-gray-100 text-[25px] font-light'>Consulting</h2>
-                                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !rounded-full !bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272] '><IoIosArrowRoundForward className='-rotate-45 text-white' size={35} /></Button>
+
 
                             </div>
                         </div>
