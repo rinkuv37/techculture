@@ -22,13 +22,16 @@ body{ font-family: "Montserrat", sans-serif;}
     }
 
 
- .homeSlider .swiper-button-prev, .homeSlider .swiper-button-next{display: flex !important; align-items: center; justify-content: center; background: #fff !important; border-radius: 100% !important; width: 50px !important; height: 50px !important; opacity: 0; transition: all 0.3s ease-in-out;}   
-  .homeSlider .swiper-button-prev::after, .homeSlider .swiper-button-next::after{color: #000 !important; font-size: 26px;}
+ .homeSlider .swiper-button-prev, .homeSlider .swiper-button-next{display: flex !important; align-items: center; justify-content: center; background: rgba(255,255,255,0.1) !important; border-radius: 100% !important; width: 40px !important; height: 40px !important;  transition: all 0.3s ease-in-out; top: 90% !important; border: 1px solid rgba(255,255,255,0.2); z-index: 50;}   
+  .homeSlider .swiper-button-prev::after, .homeSlider .swiper-button-next::after{color: #fff !important; font-size: 18px;}
 
-  .homeSlider .swiper-button-prev{left: 1% !important;}
-  .homeSlider .swiper-button-next{right: 1% !important;}
+  .homeSlider .swiper-button-prev{right: 9% !important; left: inherit !important;}
+  .homeSlider .swiper-button-next{right: 5.5% !important;}
 
    .homeSlider:hover .swiper-button-prev, .homeSlider:hover .swiper-button-next{opacity: 1;}
 
   .homeSlider .swiper-pagination-bullet{background: rgba(255,255,255,0.8) !important;}
    .homeSlider .swiper-pagination-bullet-active{@apply !bg-primary}
+
+   .homeSlider .swiper-pagination{top: 88% !important; text-align: left !important; padding-left: 5.5% !important;}
+   .homeSlider .swiper-pagination span{display: inline-block !important; width: 30px !important; border-radius: 2px !important; height: 4px !important;}
