@@ -75,7 +75,7 @@ const HomeSlider = () => {
                 </SwiperSlide>
 
 
-                              <SwiperSlide>
+                <SwiperSlide>
                     <div className="item bg-[url('/slide1.jpg')] h-screen w-full bg-cover bg-center relative">
                         <img src={"/slide1.jpg"} className='w-full h-screen object-cover' />
                         <div className='info absolute top-[25%] left-[5.6%] w-[70%] h-screen flex flex-col z-[60] gap-4'>
@@ -124,7 +124,7 @@ const HomeSlider = () => {
                 </SwiperSlide>
 
 
-                              <SwiperSlide>
+                <SwiperSlide>
                     <div className="item bg-[url('/slide1.jpg')] h-screen w-full bg-cover bg-center relative">
                         <img src={"/slide1.jpg"} className='w-full h-screen object-cover' />
                         <div className='info absolute top-[25%] left-[5.6%] w-[70%] h-screen flex flex-col z-[60] gap-4'>
@@ -173,7 +173,7 @@ const HomeSlider = () => {
                 </SwiperSlide>
 
 
-                              <SwiperSlide>
+                <SwiperSlide>
                     <div className="item bg-[url('/slide1.jpg')] h-screen w-full bg-cover bg-center relative">
                         <img src={"/slide1.jpg"} className='w-full h-screen object-cover' />
                         <div className='info absolute top-[25%] left-[5.6%] w-[70%] h-screen flex flex-col z-[60] gap-4'>
@@ -222,7 +222,7 @@ const HomeSlider = () => {
                 </SwiperSlide>
 
 
-                              <SwiperSlide>
+                <SwiperSlide>
                     <div className="item bg-[url('/slide1.jpg')] h-screen w-full bg-cover bg-center relative">
                         <img src={"/slide1.jpg"} className='w-full h-screen object-cover' />
                         <div className='info absolute top-[25%] left-[5.6%] w-[70%] h-screen flex flex-col z-[60] gap-4'>
@@ -271,7 +271,7 @@ const HomeSlider = () => {
                 </SwiperSlide>
 
 
-                              <SwiperSlide>
+                <SwiperSlide>
                     <div className="item bg-[url('/slide1.jpg')] h-screen w-full bg-cover bg-center relative">
                         <img src={"/slide1.jpg"} className='w-full h-screen object-cover' />
                         <div className='info absolute top-[25%] left-[5.6%] w-[70%] h-screen flex flex-col z-[60] gap-4'>

@@ -1,10 +1,32 @@
+"use client"
 import Button from '@mui/material/Button'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Header = () => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+    
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // cleanup
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header className='w-full h-20  flex items-center justify-center fixed top-0 left-0 z-50'>
+        <header className={`w-full h-20  flex items-center justify-center fixed top-0 left-0 z-50 ${isScrolled === true && 'scroll'}`}>
             <div className='container flex items-center justify-between'>
                 <Link href={"#"} className='logo flex items-center gap-2'>
                     <span className='flex items-center justify-center w-10 h-10 rounded-md bg-primary text-white font-bold'>T</span>
@@ -18,7 +40,7 @@ const Header = () => {
                     <Link href={"#"} className='text-white text-[17px] opacity-90 hover:opacity-100 hover:text-primary transition-all'>Features</Link>
                     <Link href={"#"} className='text-white text-[17px] opacity-90 hover:opacity-100 hover:text-primary transition-all'> Price</Link>
                     <Link href={"#"} className='text-white text-[17px] opacity-90 hover:opacity-100 hover:text-primary transition-all'>Integrations</Link>
-                    <Link href={"#"} className='text-white text-[17px] opacity-90 hover:opacity-100 hover:text-primary transition-all'>Blog</Link>    
+                    <Link href={"#"} className='text-white text-[17px] opacity-90 hover:opacity-100 hover:text-primary transition-all'>Blog</Link>
                 </nav>
 
 
