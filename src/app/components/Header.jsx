@@ -26,7 +26,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`w-full h-20  flex items-center justify-center fixed top-0 left-0 z-50 ${isScrolled === true && 'scroll'}`}>
+        <header className={`w-full h-20  flex items-center justify-center fixed top-0 left-0 z-[100] ${isScrolled === true && 'scroll'}`}>
             <div className='container flex items-center justify-between'>
                 <Link href={"#"} className='logo flex items-center gap-2'>
                     <span className='flex items-center justify-center w-10 h-10 rounded-md bg-primary text-white font-bold'>T</span>

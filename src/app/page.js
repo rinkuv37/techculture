@@ -1,4 +1,5 @@
 import About from "./components/About";
+import HomeServices from "./components/HomeServices";
 import HomeSlider from "./components/HomeSlider";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <HomeSlider />
       <About/>
+      <HomeServices/>
     </>
   );
 }

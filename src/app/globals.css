@@ -8,6 +8,8 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+body,html{overflow-x: hidden !important;}
+
 .container {
   width: 90% !important;
   max-width: 95% !important;
@@ -184,3 +186,15 @@ header.scroll{@apply bg-gray-900}
 
  .text-gred{background: linear-gradient(90deg, #ff6333, #ff815a, #b42c03);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; } 
+
+
+  .serviceBox {transition: all 0.3s ease-in-out; position: relative; overflow: hidden;}
+  .serviceBox stop{transition: all 0.3s;}
+  .serviceBox:hover stop{stop-color: #fff !important;}
+  .serviceBox::before{content: ""; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 50; background-image: linear-gradient(to right, #ff6333, #d14014); opacity: 0; transition: all 0.3s ease-in-out;}
+
+  .serviceImg,.serviceContent{position: relative; z-index: 51;}
+  .serviceBox:hover::before{opacity: 1;}
+  .serviceBox:hover .serviceContent * {color: #fff !important;}
+  .serviceBox:hover button{background: #fff !important;}
+  .serviceBox:hover button svg{color: #000 !important;}
