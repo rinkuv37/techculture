@@ -297,3 +297,5 @@ header.scroll {
   z-index: 100; background-image: linear-gradient(to right, transparent , #111a2e);}
    .marquee__Wrapper::before{content: ""; width: 100px; height: 100%; position: absolute; top: 0px; left: 0px; 
   z-index: 100; background-image: linear-gradient(to right, #111a2e , transparent);}
+
+  .technologies button{border: 1px solid rgba(255,255,255,0.1) !important;}

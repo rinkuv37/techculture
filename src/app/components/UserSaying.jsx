@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const UserSaying = () => {
     return (
-        <section className='bg-[#111a2e] py-20'>
+        <section className='bg-[#111a2e] py-20 pt-0'>
             <div className='container'>
                 <div className='flex items-center justify-center'>
                     <span className='bg-orange-50 p-1 px-3 border border-[#ffad4f] rounded-full 
