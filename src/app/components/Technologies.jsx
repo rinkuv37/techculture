@@ -52,7 +52,7 @@ const Technologies = () => {
                                     isActiveTech?.data?.length !== 0 && isActiveTech?.data?.map((item, index) => {
                                         return (
                                             <div className='bg-slate-800/50 p-3 rounded-lg flex flex-col 
-                                            gap-2 justify-center text-center h-32 border border-[rgba(255,255,255,0.050)] transition-all hover:scale-110 hover:bg-slate-800' key={index}>
+                                            gap-2 justify-center text-center h-32 border border-[rgba(255,255,255,0.050)] transition-all hover:scale-110 hover:bg-slate-700' key={index}>
                                                     <img src={item?.img} alt='img' width={50} className='m-auto'/>
                                                     <h3 className='text-white/80 text-[15px] font-bold'>{item?.name}</h3>
                                             </div>
