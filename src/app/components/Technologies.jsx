@@ -8,7 +8,7 @@ const Technologies = () => {
     const [isActiveTech, setIsActiveTech] = useState(technologiesData[0]);
 
     return (
-        <section className='bg-[#111a2e] py-20'>
+        <section className='bg-[#000319] py-20'>
             <div className='container'>
                 <div className='flex items-center justify-center'>
                     <span className='bg-orange-50 p-1 px-3 border border-[#ffad4f] rounded-full 
@@ -26,7 +26,7 @@ const Technologies = () => {
                     {
                         technologiesData?.length !== 0 && technologiesData?.map((item, index) => {
                             return (
-                                <Button key={index} className={`bg-[#192233] !text-gray-300 !rounded-full !px-5 !py-2 !font-[600] !text-[15px] !capitalize hover:bg-[#222f47] items-center gap-2 ${isActive === index && '!bg-primary !text-white'}`} onClick={() => {
+                                <Button key={index} className={`bg-[#000319] !text-gray-300 !rounded-full !px-5 !py-2 !font-[600] !text-[15px] !capitalize hover:bg-[#222f47] items-center gap-2 ${isActive === index && '!bg-primary !text-white'}`} onClick={() => {
                                     setIsActive(index);
                                     setIsActiveTech(item)
                                 }}>
@@ -46,7 +46,7 @@ const Technologies = () => {
                         <h2 className='text-center text-white text-[35px] font-bold'>{isActiveTech?.name}</h2>
                         <br />
 
-                        <div className='p-8 bg-[#1a2439] rounded-md'>
+                        <div className='p-8 bg-[#01051d] rounded-md border border-[rgba(255,255,255,0.1)]'>
                             <div className='grid grid-cols-6 gap-8'>
                                 {
                                     isActiveTech?.data?.length !== 0 && isActiveTech?.data?.map((item, index) => {

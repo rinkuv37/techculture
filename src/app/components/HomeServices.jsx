@@ -17,11 +17,11 @@ const HomeServices = () => {
     }, [isExpend])
 
     return (
-        <section className="py-20 pb-10 bg-gray-800 serviceSection bg-[url('/herobanner__1.jpg')]">
+        <section className="py-20 pb-10 bg-[#000319] serviceSection ">
             <div className='container' data-aos="zoom-in">
-                <h2 className='text-white text-[20px]'>SERVICES</h2>
-                <p className='text-white font-light text-[35px] py-3'>Transform your business with advanced technologies</p>
-
+                <h2 className='text-[50px] font-bold text-white leading-[60px] text-center'>Comprehensive <span className='text-gred'>Solutions</span></h2>
+                <p className='text-white font-light text-[20px] py-3 text-center'>Transform your business with advanced technologies</p>
+                <br/>
 
                 <div className='grid grid-cols-4 gap-10 py-4 services'>
                     {

@@ -201,6 +201,9 @@ header.scroll {
   -webkit-text-fill-color: transparent;
 }
 
+.services .box {
+  transition: all 0.4s ease-in-out !important;
+}
 
 .services .box .info::before {
   content: "";
@@ -243,17 +246,48 @@ header.scroll {
 }
 
 
-.testimonialSlider .actions{display: flex !important; align-items: center; justify-content: center; border: 1px solid rgba(0,0,0,0.6); border-radius: 100%; width: 60px !important; height: 60px !important; min-width: 60px !important; color: #fff !important; position: absolute !important; top: 47%;}
+.testimonialSlider .actions {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 100%;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  color: #fff !important;
+  position: absolute !important;
+  top: 47%;
+}
 
-.testimonialSlider .actions{@apply bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272]}
+.testimonialSlider .actions {
+  @apply bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272]
+}
 
-.testimonialSlider .actions.prev{left: -5% !important;}
-.testimonialSlider .actions.next{right: -5% !important;}
+.testimonialSlider .actions.prev {
+  left: -5% !important;
+}
 
-.testimonialSlider .swiper{padding-bottom: 50px !important;}
-.testimonialSlider .swiper-pagination{top: 95% !important;}
-.testimonialSlider .swiper-pagination-bullet{width: 10px !important; height: 10px !important;}
-.testimonialSlider .swiper-pagination .swiper-pagination-bullet-active{@apply bg-primary}
+.testimonialSlider .actions.next {
+  right: -5% !important;
+}
+
+.testimonialSlider .swiper {
+  padding-bottom: 50px !important;
+}
+
+.testimonialSlider .swiper-pagination {
+  top: 95% !important;
+}
+
+.testimonialSlider .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.testimonialSlider .swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-primary
+}
 
 
 .autoplay-progress {
@@ -269,7 +303,9 @@ header.scroll {
   font-weight: bold;
 }
 
-.autoplay-progress {@apply text-primary}
+.autoplay-progress {
+  @apply text-primary
+}
 
 .autoplay-progress svg {
   --progress: 0;
@@ -288,16 +324,107 @@ header.scroll {
 }
 
 
- /* ..react-simple-marquee__marquee-elem{@apply !grid !grid-cols-3 !gap-6 mt-8} */
+/* ..react-simple-marquee__marquee-elem{@apply !grid !grid-cols-3 !gap-6 mt-8} */
 
 
- .rfm-child{margin: 0px 10px !important;}
+.rfm-child {
+  margin: 0px 10px !important;
+}
 
- .marquee__Wrapper::after{content: ""; width: 100px; height: 100%; position: absolute; top: 0px; right: 0px; 
-  z-index: 99; background-image: linear-gradient(to right, transparent , #111a2e);}
-   .marquee__Wrapper::before{content: ""; width: 100px; height: 100%; position: absolute; top: 0px; left: 0px; 
-  z-index: 99; background-image: linear-gradient(to right, #111a2e , transparent);}
+.marquee__Wrapper::after {
+  content: "";
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 99;
+  background-image: linear-gradient(to right, transparent, #111a2e);
+}
 
-  .technologies button{border: 1px solid rgba(255,255,255,0.1) !important;}
+.marquee__Wrapper::before {
+  content: "";
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  background-image: linear-gradient(to right, #111a2e, transparent);
+}
 
-  .technologiesSection h2{text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);}
+.technologies button {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.technologiesSection h2 {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.teamSection {
+  width: 100%;
+  height: auto;
+  background: url("/team.png") no-repeat top left #000319;
+}
+
+.teamSection .teamItem {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.teamSection .teamItem .info {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 3, 25, 0.8));
+  transition: all 0.3s ease-in-out !important;
+}
+
+.teamSection .teamItem img {
+  transition: all 0.3s ease-in-out !important;
+}
+
+.teamSection .teamItem:hover img {
+  filter: blur(8px);
+  transform: scale(1.2);
+}
+
+.teamSection .teamItem:hover .info {
+  background-image: linear-gradient(rgba(0, 3, 25, 0.5), rgba(0, 3, 25, 0.8));
+}
+
+.teamSection .teamItem .info .socials {
+  transition: all 0.3s;
+  position: absolute;
+  bottom: -100px;
+}
+
+.teamSection .teamItem .info .socials a {
+  transition: all 0.3s;
+}
+
+.teamSection .teamItem:hover .info .socials {
+  bottom: 0px;
+}
+
+.teamSection .teamItem .content {
+  transition: all 0.3s;
+}
+
+.teamSection .teamItem:hover .content {
+  padding-bottom: 40px;
+}
+
+.teamSection .teamItem:hover .info .socials a:hover {
+  @apply bg-gradient-to-r from-[#ff6333] via-[#e15226] to-[#fe9272]
+}
+
+.teamSection .swiper {
+  padding-bottom: 60px !important;
+}
+
+.teamSection .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.teamSection .swiper-pagination-bullet-active {
+  @apply !bg-primary
+}
