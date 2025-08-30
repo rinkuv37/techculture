@@ -17,7 +17,7 @@ const Testimonials = () => {
     const nextRef = useRef(null);
 
     return (
-        <section className='py-20'>
+        <section className='py-20 pb-10'>
             <div className='container relative'>
                 <img src={"/testimonial__small__img.png"} alt='image' className='testimonial__2__small__icon' />
                 <div className='flex items-center justify-center'>
