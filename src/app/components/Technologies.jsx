@@ -5,6 +5,7 @@ import Button from '@mui/material/Button'
 const Technologies = () => {
 
     const [isActive, setIsActive] = useState(0);
+    const [isActiveTech, setIsActiveTech] = useState(technologiesData[0]);
 
     return (
         <section className='bg-[#111a2e] py-20'>
@@ -25,11 +26,45 @@ const Technologies = () => {
                     {
                         technologiesData?.length !== 0 && technologiesData?.map((item, index) => {
                             return (
-                                <Button key={index} className={`bg-[#192233] !text-gray-300 !rounded-full !px-5 !py-2 !font-[600] !capitalize hover:bg-[#222f47] ${isActive === index && '!bg-primary !text-white'}`} onClick={()=>setIsActive(index)}>{item?.name}</Button>
+                                <Button key={index} className={`bg-[#192233] !text-gray-300 !rounded-full !px-5 !py-2 !font-[600] !text-[15px] !capitalize hover:bg-[#222f47] items-center gap-2 ${isActive === index && '!bg-primary !text-white'}`} onClick={() => {
+                                    setIsActive(index);
+                                    setIsActiveTech(item)
+                                }}>
+                                    <img src={item?.icon} alt="image" width={20} /> {item?.name}</Button>
                             )
                         })
                     }
                 </div>
+
+                <br />
+                <br />
+
+
+                {
+                    isActiveTech &&
+                    <div className='technologiesSection'>
+                        <h2 className='text-center text-white text-[35px] font-bold'>{isActiveTech?.name}</h2>
+                        <br />
+
+                        <div className='p-8 bg-[#1a2439] rounded-md'>
+                            <div className='grid grid-cols-6 gap-8'>
+                                {
+                                    isActiveTech?.data?.length !== 0 && isActiveTech?.data?.map((item, index) => {
+                                        return (
+                                            <div className='bg-slate-800/50 p-3 rounded-lg flex flex-col 
+                                            gap-2 justify-center text-center h-32 border border-[rgba(255,255,255,0.050)] transition-all hover:scale-110 hover:bg-slate-800' key={index}>
+                                                    <img src={item?.img} alt='img' width={50} className='m-auto'/>
+                                                    <h3 className='text-white/80 text-[15px] font-bold'>{item?.name}</h3>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
 
 
             </div>

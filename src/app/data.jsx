@@ -70,7 +70,7 @@ export const technologiesData = [
     },
     {
         name: "Web & CMS Platforms",
-        icon: "https://cdn-icons-png.flaticon.com/128/14130/14130001.png",
+        icon: "https://cdn-icons-png.flaticon.com/128/841/841364.png",
         data: [
             {
                 name: "WordPress",
