@@ -29,7 +29,7 @@ const HomeServices = () => {
                             if (index <= expendNum) {
                                 return (
                                     <Link href={"#"} key={index} className='box h-96 rounded-md overflow-hidden relative group hover:-translate-y-2 transition-all'>
-                                        <img src={item?.img} className='full transition-all h-full object-cover' alt='image' />
+                                        <img src={item?.img} className='full transition-all h-full object-cover group-hover:scale-110' alt='image' />
                                         <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
                                             <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
                                                 <h2 className='text-gray-100 text-[25px] font-light px-5'>{item?.name}</h2>

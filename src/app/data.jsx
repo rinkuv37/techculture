@@ -4,7 +4,7 @@ export const servicesData = [
         img: "https://www.tcs.com/content/dam/global-tcs/en/images/what-we-do/ai-insights-card-2.png/jcr:content/renditions/cq5dam.thumbnail.640.640.png"
     },
     {
-        name: "cloud",
+        name: "Cloud",
         img: "https://www.tcs.com/content/dam/global-tcs/ja/images/insights/trends/cloud-business-case-model-transformation/card.jpg/jcr:content/renditions/cq5dam.thumbnail.640.640.jpeg"
     },
     {

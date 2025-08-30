@@ -46,7 +46,7 @@ header.scroll {
 }
 
 .homeSlider .item .info {
-  left: -40% !important;
+  left: -5.7% !important;
   opacity: 0;
   transition: all 0.3s ease-in-out !important;
   transition-duration: 0.7s !important;
@@ -227,6 +227,8 @@ header.scroll {
 .services .box:hover button svg {
   color: #000 !important;
 }
+
+.services .box img{transition: all 0.4s ease-in-out !important;}
 
 .testimonial__2__small__icon {
   position: absolute;

@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import Button from '@mui/material/Button';
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { Brands } from './Brands';
 
 const HomeSlider = () => {
     const progressCircle = useRef(null);
@@ -18,7 +19,7 @@ const HomeSlider = () => {
         progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
     return (
-        <section className='homeSlider'>
+        <section className='homeSlider relative'>
             <Swiper
                 navigation={true}
                 modules={[Navigation, Autoplay, Pagination]}
