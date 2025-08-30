@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -11,6 +11,12 @@ import Button from '@mui/material/Button';
 import { IoIosArrowRoundForward } from "react-icons/io";
 
 const HomeSlider = () => {
+    const progressCircle = useRef(null);
+    const progressContent = useRef(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+        progressCircle.current.style.setProperty('--progress', 1 - progress);
+        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    };
     return (
         <section className='homeSlider'>
             <Swiper
@@ -25,6 +31,7 @@ const HomeSlider = () => {
                     clickable: true,
                 }}
                 speed={300}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
             >
                 <SwiperSlide>
                     <div className="item bg-[url('/slide1.jpg')] h-screen w-full bg-cover bg-center relative">
@@ -74,6 +81,14 @@ const HomeSlider = () => {
                     </div>
                 </SwiperSlide>
 
+
+
+                <div className="autoplay-progress" slot="container-end">
+                    <svg viewBox="0 0 48 48" ref={progressCircle}>
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span ref={progressContent}></span>
+                </div>
 
             </Swiper>
         </section>

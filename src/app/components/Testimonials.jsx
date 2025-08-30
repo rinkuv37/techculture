@@ -30,17 +30,20 @@ const Testimonials = () => {
 
 
 
-                <div className='testimonialSlider my-10 relative'>
+                <div className='testimonialSlider my-10 relative' data-aos="fade-up">
                     <Swiper
                         slidesPerView={2}
                         spaceBetween={30}
                         modules={[Pagination, Navigation]}
-                        onInit={(swiper) => {
-                            swiper.params.navigation.prevEl = prevRef.current;
-                            swiper.params.navigation.nextEl = nextRef.current;
-                            swiper.navigation.init();
-                            swiper.navigation.update();
+                        pagination={{
+                            clickable: true,
                         }}
+                        // onInit={(swiper) => {
+                        //     swiper.params.navigation.prevEl = prevRef.current;
+                        //     swiper.params.navigation.nextEl = nextRef.current;
+                        //     swiper.navigation.init();
+                        //     swiper.navigation.update();
+                        // }}
                     >
                         <SwiperSlide>
                             <div className='testimonialItem bg-orange-50 w-full rounded-md p-10'>
@@ -187,8 +190,8 @@ const Testimonials = () => {
                         </SwiperSlide>
                     </Swiper>
 
-                    <Button className='actions prev' ref={prevRef}><TfiAngleLeft size={25} className='text-white' /></Button>
-                    <Button className='actions next' ref={nextRef}><TfiAngleRight size={25} className='text-white' /></Button>
+                    {/* <Button className='actions prev' ref={prevRef}><TfiAngleLeft size={25} className='text-white' /></Button>
+                    <Button className='actions next' ref={nextRef}><TfiAngleRight size={25} className='text-white' /></Button> */}
                 </div>
 
 
