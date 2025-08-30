@@ -1,64 +1,57 @@
+"use client"
 import Button from '@mui/material/Button'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { servicesData } from '../data';
+import { IoIosArrowRoundDown } from "react-icons/io";
+import { IoIosArrowRoundUp } from "react-icons/io";
 
 const HomeServices = () => {
+
+    const [expendNum, setexpendNum] = useState(3);
+    const [isExpend, setisExpend] = useState(false);
+
+    useEffect(() => {
+        isExpend === false ? setexpendNum(3) : setexpendNum(100)
+    }, [isExpend])
+
     return (
-        <section className="py-20 bg-gray-800 serviceSection bg-[url('/herobanner__1.jpg')]">
-            <div className='container'>
+        <section className="py-20 pb-10 bg-gray-800 serviceSection bg-[url('/herobanner__1.jpg')]">
+            <div className='container' data-aos="zoom-in">
                 <h2 className='text-white text-[20px]'>SERVICES</h2>
                 <p className='text-white font-light text-[35px] py-3'>Transform your business with advanced technologies</p>
 
 
                 <div className='grid grid-cols-4 gap-10 py-4 services'>
-                    <Link href={"#"} className='box rounded-md overflow-hidden relative group'>
-                        <img src={"https://www.tcs.com/content/dam/global-tcs/en/images/what-we-do/ai-insights-card-2.png/jcr:content/renditions/cq5dam.thumbnail.640.640.png"} className='full transition-all group-hover:scale-105 h-full object-cover' alt='image' />
-                        <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
-                           <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
-                                <h2 className='text-gray-100 text-[25px] font-light'>AI and Data & Analytics</h2>
+                    {
+                        servicesData?.length !== 0 && servicesData?.map((item, index) => {
+                            if (index <= expendNum) {
+                                return (
+                                    <Link href={"#"} key={index} className='box h-96 rounded-md overflow-hidden relative group hover:-translate-y-2 transition-all'>
+                                        <img src={item?.img} className='full transition-all h-full object-cover' alt='image' />
+                                        <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
+                                            <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
+                                                <h2 className='text-gray-100 text-[25px] font-light px-5'>{item?.name}</h2>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                )
+                            }
+
+                        })
+                    }
 
 
-                            </div>
-                        </div>
-                    </Link>
+                </div>
 
-                    <Link href={"#"} className='box rounded-md overflow-hidden relative group'>
-                        <img src={"https://www.tcs.com/content/dam/global-tcs/ja/images/insights/trends/cloud-business-case-model-transformation/card.jpg/jcr:content/renditions/cq5dam.thumbnail.640.640.jpeg"} className='full transition-all group-hover:scale-105 h-full object-cover' alt='image' />
-                        <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
-                             <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
-                                <h2 className='text-gray-100 text-[25px] font-light'>Cloud</h2>
+                <div className='flex items-center justify-center mt-10'>
+                    <Button className='!bg-white !text-gray-800 !font-bold !capitalize items-center' size='large' onClick={() => setisExpend(!isExpend)}>View All Topics
+                        {
+                                isExpend === false ?  <IoIosArrowRoundDown size={30} /> :  <IoIosArrowRoundUp size={30} />
+                        }
 
-
-                            </div>
-                        </div>
-                    </Link>
-
-
-                    <Link href={"#"} className='box rounded-md overflow-hidden relative group'>
-                        <img src={"https://www.tcs.com/content/dam/global-tcs/en/images/who-we-are/inverstor-relations-poster.png/jcr:content/renditions/cq5dam.thumbnail.640.640.png"} className='full transition-all group-hover:scale-105 h-full object-cover' alt='image' />
-                        <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full '>
-                             <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
-                                <h2 className='text-gray-100 text-[25px] font-light'>Cognitive Business Operations</h2>
-
-
-                            </div>
-                        </div>
-                    </Link>
-
-
-                    <Link href={"#"} className='box rounded-md overflow-hidden relative group'>
-                        <img src={"https://www.tcs.com/content/dam/global-tcs/en/images/what-we-do/industries/travel/case-study/maersk-cloud-iot-platform-automate-reefer-monitoring-system-u-card.jpg/jcr:content/renditions/cq5dam.thumbnail.640.640.jpeg"} className='full transition-all group-hover:scale-105 h-full object-cover' alt='image' />
-                        <div className='info p-6 absolute top-0 left-0 z-50 w-full h-full !pr-5'>
-                            <div className='flex justify-between items-center !absolute bottom-5 pr-5 w-[96%]'>
-                                <h2 className='text-gray-100 text-[25px] font-light'>Consulting</h2>
-
-
-                            </div>
-                        </div>
-                    </Link>
-
-
+                       </Button>
                 </div>
 
 
